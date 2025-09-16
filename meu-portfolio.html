@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #2bb19f;
+            background: #86cc78;
         }
         header {
             background: #333;
@@ -32,7 +32,7 @@
             background: #f8fafa;
             padding: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgb(19, 17, 17);
         }
         .perfil {
             display: flex;
@@ -48,16 +48,66 @@
             flex: 1;
         }
         h2 {
-            color: #333;
+            color: #110f0f;
         }
         .projetos {
             margin-top: 2rem;
         }
         .projeto {
-            background: #9edba6;
+            background: #cfeeb1;
             padding: 1rem;
             margin-bottom: 1rem;
             border-radius: 6px;
+            color: #0a0a0a; /* Nova cor da fonte */
+}
+         .projeto img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-radius: 0 0 8px 8px;
+        }
+             /* Responsividade para tablets */
+        @media (max-width: 900px) {
+            .container {
+                padding: 1rem;
+            }
+            .perfil {
+                flex-direction: column;
+                text-align: center;
+            }
+            .sobre {
+                width: 100%;
+            }
+        }
+        /* Responsividade para celulares */
+        @media (max-width: 600px) {
+            header {
+                padding: 1rem 0.5rem;
+            }
+            .container {
+                margin: 1rem;
+                padding: 0.5rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            .projeto img {
+                max-width: 100%;
+            }
+        }
         }
         @media (max-width: 600px) {
             .perfil {
@@ -75,6 +125,7 @@
         <h1>Anefátima Figueiredo</h1>
         <nav>
             <a href="#sobre">Sobre Mim</a>
+            <a href="#hobbies">Hobbies</a>
             <a href="#projetos">Projetos</a>
             <a href="#contato">Contato</a>
         </nav>
@@ -84,13 +135,21 @@
             <img src="foto de perfil.jpg" alt="Foto de perfil">
             <div class="sobre">
                 <h2>Sobre Mim</h2>
-                <p>Olá! Bibliotecária e Médica Veternária Pós Graduada em Oncologia Veterinária. Amo cuidar dos animais e estou adquirindo novas experiência em tecnologia como Desenvolvedora Back End</p>
+                <p>Olá! Bibliotecária e Médica Veternária Pós Graduada em Oncologia Veterinária. Amo cuidar dos animais e estou adquirindo novas experiência em tecnologia como Desenvolvedora Back End.</p>
+        <section class="perfil" id="hobbies">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Leitura</li>
+                <li>Viajar</li>
+                <li>Artesananto</li>
+            </ul>
             </div>
         </section>
         <section class="projetos" id="projetos">
             <h2>Projetos</h2>
             <div class="projeto">
                 <h3>Projeto 1</h3>
+                <img src="foto pet.jpg" alt="foto pet" style="width:100%;max-width:100px;border-radius:8px;margin-bottom:1rem;">
                 <p>Criar uma API para gerenciamento de consultas veterinárias</p>
                 <p>1. Estrutura do Projeto
                 <br>Páginas principais:
@@ -102,6 +161,7 @@
             </div>
             <div class="projeto">
                 <h3>Projeto 2</h3>
+                <img src="biblioteca.jpg" alt="biblioteca" style="width:100%;max-width:200px;border-radius:8px;margin-bottom:1rem;">
                 <p>Criar Criar um Sistema de Gerenciamento para Bibliotecas</p>
                 <li>Home: Apresentação da biblioteca, serviços oferecidos e informações de contato.</li>
                 <li>Catálogo: Lista de livros disponíveis para consulta.</li>
@@ -114,6 +174,20 @@
             <h2>Contato</h2>
             <p>Email: anelenox.vet.domiciliar@gmail.com</p>
             <p>LinkedIn: <a href="#" target="_blank">Anefátima Figueiredo</a></p>
-        </section>
+            <p>Redes Sociais:</p>
+    <ul style="list-style: none; padding: 0;">
+        <li>
+            <a href="https://www.instagram.com/_anefigueiredo/?hl=pt-br" target="_blank">Instagram</a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/_anefigueiredo" target="_blank">Facebook</a>
+        </li>
+    </ul>
+</section>
+        </section>        </div>
+    <footer>
+        <p>&copy; 2025 Anefátima Figueiredo. Todos os direitos reservados.</p>
+    </footer>
+</body>
     </div>
 </body>
