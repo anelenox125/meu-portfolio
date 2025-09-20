@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Veterinária Vida Animal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --verde: #3bb77e;
+            --verde-escuro: #1e5c3a;
+            --dourado: #e7b10a;
+            --branco: #fff;
+            --cinza: #f6f6f6;
+            --cinza-escuro: #222;
+        }
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--cinza);
+            color: var(--cinza-escuro);
+        }
+        header {
+            background: linear-gradient(90deg, var(--verde-escuro) 60%, var(--verde) 100%);
+            color: var(--branco);
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--dourado);
+            margin-bottom: 0.5rem;
+        }
+        nav {
+            margin-top: 1.2rem;
+        }
+        nav a {
+            color: var(--branco);
+            margin: 0 1.2rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: var(--dourado);
+        }
+        .hero {
+            background: var(--branco);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(59,183,126,0.10);
+            max-width: 900px;
+            margin: -3rem auto 2rem auto;
+            padding: 2.5rem 2rem 2rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2.5rem;
+        }
+        .hero-img {
+            flex: 1 1 220px;
+            min-width: 180px;
+        }
+        .hero-img img {
+            width: 180px;
+            border-radius: 50%;
+            border: 4px solid var(--verde);
+            box-shadow: 0 2px 12px rgba(59,183,126,0.15);
+        }
+        .hero-content {
+            flex: 2 1 320px;
+        }
+        .hero-content h1 {
+            font-size: 2.2rem;
+            color: var(--verde-escuro);
+            margin-bottom: 0.5rem;
+        }
+        .hero-content p {
+            font-size: 1.15rem;
+            margin-bottom: 1.2rem;
+        }
+        .cta-btn {
+            background: var(--dourado);
+            color: var(--cinza-escuro);
+            border: none;
+            border-radius: 24px;
+            padding: 0.9rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(59,183,126,0.10);
+            transition: background 0.2s, color 0.2s;
+        }
+        .cta-btn:hover {
+            background: var(--verde-escuro);
+            color: var(--branco);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto 2rem auto;
+            background: var(--branco);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px rgba(59,183,126,0.10);
+        }
+        .servicos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+        }
+        .card-servico {
+            background: var(--cinza);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(59,183,126,0.08);
+            padding: 2rem 1.5rem;
+            flex: 1 1 220px;
+            min-width: 220px;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card-servico:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px rgba(59,183,126,0.15);
+        }
+        .card-servico i {
+            font-size: 2.5rem;
+            color: var(--verde);
+            margin-bottom: 0.7rem;
+        }
+        .card-servico h3 {
+            margin: 0.5rem 0 0.7rem 0;
+            color: var(--verde-escuro);
+        }
+        .card-servico p {
+            font-size: 1rem;
+            color: #444;
+        }
+        .agendamento {
+            background: var(--verde);
+            color: var(--branco);
+            border-radius: 12px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .agendamento h2 {
+            color: var(--branco);
+        }
+        .agendamento .cta-btn {
+            margin-top: 1rem;
+        }
+        .sobre-clinica {
+            margin-bottom: 2.5rem;
+        }
+        .sobre-clinica h2 {
+            color: var(--verde-escuro);
+        }
+        .contato {
+            margin-top: 2.5rem;
+        }
+        .contato h2 {
+            color: var(--verde-escuro);
+        }
+        .redes-sociais {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 0.7rem;
+            justify-content: center;
+        }
+        .redes-sociais a {
+            color: var(--verde-escuro);
+            font-size: 1.7rem;
+            transition: color 0.2s;
+        }
+        .redes-sociais a:hover {
+            color: var(--dourado);
+        }
+        footer {
+            background: var(--verde-escuro);
+            color: var(--branco);
+            text-align: center;
+            padding: 1.2rem 0 0.5rem 0;
+            border-radius: 0 0 16px 16px;
+            font-size: 1rem;
+        }
+        @media (max-width: 900px) {
+            .container, .hero {
+                padding: 1.2rem;
+            }
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-img {
+                margin-bottom: 1rem;
+            }
+        }
+        @media (max-width: 600px) {
+            header {
+                padding: 1.2rem 0.5rem 1rem 0.5rem;
+            }
+            .container, .hero {
+                margin: 0.5rem;
+                padding: 0.7rem;
+            }
+            .card-servico {
+                min-width: 100%;
+                max-width: 100%;
+            }
+            .hero-content h1 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><i class="fa-solid fa-paw"></i> Vida Animal</div>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#agendamento">Agendamento</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+    <section class="hero" id="sobre">
+        <div class="hero-img">
+            <img src="foto de perfil.jpg" alt="Foto da veterinária da clínica">
+        </div>
+        <div class="hero-content">
+            <h1>Cuidando do seu pet com amor, tecnologia e excelência!</h1>
+            <p>Clínica Veterinária Vida Animal: atendimento humanizado, estrutura moderna e equipe especializada para garantir a saúde e o bem-estar do seu melhor amigo.</p>
+            <a href="#agendamento" class="cta-btn">Agende uma consulta</a>
+        </div>
+    </section>
+    <main class="container">
+        <section class="sobre-clinica">
+            <h2>Sobre a Clínica</h2>
+            <p>Somos referência em cuidados veterinários, com atendimento clínico, cirúrgico, exames laboratoriais, vacinas e acompanhamento personalizado. Nossa missão é promover saúde, carinho e confiança para pets e tutores.</p>
+        </section>
+        <section class="servicos" id="servicos">
+            <div class="card-servico">
+                <i class="fa-solid fa-stethoscope"></i>
+                <h3>Consultas</h3>
+                <p>Atendimento clínico completo para cães, gatos e pets exóticos, com diagnóstico preciso e acompanhamento individualizado.</p>
+            </div>
+            <div class="card-servico">
+                <i class="fa-solid fa-syringe"></i>
+                <h3>Vacinas</h3>
+                <p>Vacinação segura e atualizada para proteger seu pet contra as principais doenças.</p>
+            </div>
+            <div class="card-servico">
+                <i class="fa-solid fa-x-ray"></i>
+                <h3>Exames</h3>
+                <p>Laboratório próprio, exames de imagem e diagnósticos rápidos para maior tranquilidade.</p>
+            </div>
+            <div class="card-servico">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>Especialidades</h3>
+                <p>Oncologia, dermatologia, odontologia, nutrição e muito mais para o cuidado integral do seu pet.</p>
+            </div>
+        </section>
+        <section class="agendamento" id="agendamento">
+            <h2>Agende uma Consulta</h2>
+            <p>Preencha o formulário e nossa equipe entrará em contato para confirmar o melhor horário para você e seu pet.</p>
+            <a href="mailto:anelenox.vet.domiciliar@gmail.com?subject=Agendamento%20de%20Consulta" class="cta-btn">Agendar por E-mail</a>
+        </section>
+        <section class="contato" id="contato">
+            <h2>Contato</h2>
+            <p><i class="fa-solid fa-envelope"></i> <a href="mailto:anelenox.vet.domiciliar@gmail.com">anelenox.vet.domiciliar@gmail.com</a></p>
+            <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/seu-usuario-linkedin" target="_blank">Anefátima Figueiredo</a></p>
+            <div class="redes-sociais">
+                <a href="https://www.instagram.com/_anefigueiredo/?hl=pt-br" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/_anefigueiredo" target="_blank" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Clínica Veterinária Vida Animal. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
